@@ -7,7 +7,7 @@ layout: page
 <div id="results"></div>
 <script>
   async function loaded(reader) {
-    const response = await fetch('https://sanbsur-23dogsvscats.hf.space/--replicas/4hs4d/', {
+    const response = await fetch('https://sanbsur-cats-vs-dogs.hf.space/api/predict', {
       method: "POST", body: JSON.stringify({ "data": [reader.result] }),
       headers: { "Content-Type": "application/json" }
     });
