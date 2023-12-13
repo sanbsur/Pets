@@ -17,4 +17,14 @@ const result = await app.predict("/predict", [
 	]);
 
 console.log(result.data);
+
+import { client } from "@gradio/client";
+
+const app = await client("https://sanbsur-23dogsvscats.hf.space/--replicas/4hs4d/");
+const result = await app.predict("/load_example", [
+				0, // undefined (index of selected example) in 'parameter_11' Dataset component
+	]);
+
+console.log(result.data);
+
 </script>
